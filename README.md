@@ -68,7 +68,7 @@ Confirm that the ticket reflects the new SLA and department configuration.
 <p>
 As the agent, assign the ticket to the appropriate person or team and add an internal note explaining that you are taking ownership of the issue.
 Work the ticket through its lifecycle until the problem is resolved, then close the ticket.
-In a real help desk environment, email integration ensures that end users receive updates whenever the ticket is updated or closed. Users can reply directly to those emails, and their responses are captured inside the ticket thread.
+In a real help desk environment, email integration ensures that end users receive updates whenever the ticket is updated or closed. 
 </p>
 
 <h2>Summary</h2>
