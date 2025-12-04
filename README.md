@@ -1,5 +1,3 @@
-
-
 <h1>osTicket Ticket Management Lab (Running Inside an Azure VM)</h1>
 <p>
 In this lab, we will use an osTicket installation running inside a virtual machine to simulate real Help Desk operations. 
@@ -23,102 +21,59 @@ We will create tickets as end users, update and resolve them as agents, adjust d
 <ul>
   <li>Access to an Azure VM with osTicket installed</li>
   <li>Admin login for osTicket</li>
-  <li>Agent accounts (e.g., john and jane)</li>
+  <li>Agent accounts)</li>
   <li>Access to the osTicket end-user portal</li>
 </ul>
 
 <h2>Deployment Steps</h2>
 
 <h3>Step 1: Access the Admin and End User Panels</h3>
-<img src="" width="80%" />
+<p>Screenshot: <a href="https://imgur.com/a/EPZptqC" target="_blank">View Image</a></p>
 <p>
 Open a browser inside the VM and access the osTicket Admin Panel and End User Portal. 
-Log in with your administrator or agent accounts. Keep both tabs open to switch between the roles easily.
+Log in with your administrator or agent accounts. Keep both tabs open so you can easily switch between the end-user and agent views.
 </p>
 
 <h3>Step 2: Modify Departments</h3>
-<img src="" width="80%" />
+<p>Screenshot: <a href="https://imgur.com/a/sBQRxQE" target="_blank">View Image</a></p>
 <p>
-Go to the Departments section. Set the SysAdmins department as a top-level department. 
+From the Admin Panel, go to the Departments section. Set the SysAdmins department as a top-level department. 
 Then delete the Maintenance department entirely. This simulates restructuring departments within a help desk environment.
 </p>
 
 <h3>Step 3: Create and Work a Critical Online Banking Ticket</h3>
-<img src="" width="80%" />
+<p>Screenshot: <a href="https://imgur.com/a/MKlkY8f" target="_blank">View Image</a></p>
 <p>
 As an end user, create a ticket reporting that the entire mobile/online banking system is down.
-Switch to the agent account “john,” observe the ticket’s properties, and set:
+Switch to the agent account “john,” locate the ticket, and observe its properties (priority, department, SLA, and assignee). Then set:
 </p>
 <ul>
-  <li>SLA: Sev-A (1 hour, 24/7)</li>
+  <li>SLA: Sev-A </li>
   <li>Department: Online Banking</li>
 </ul>
 <p>
-Attempt to view or modify the ticket again as john. Then, log in as jane and work the ticket to completion.
+
 </p>
 
-<h3>Step 4: Create an Adobe Upgrade Ticket (Accounting)</h3>
-<img src="" width="80%" />
+<h3>Step 3.1: Update SLA and Confirm Ticket Properties</h3>
+<p>Screenshot: <a href="https://imgur.com/a/xG3kgdi" target="_blank">View Image</a></p>
 <p>
-As an end user, create a ticket stating that the accounting department needs an Adobe upgrade and it is broken.
-As john, observe its initial properties, then update:
-</p>
-<ul>
-  <li>SLA: Sev-B (4 hours, 24/7)</li>
-  <li>Department: Support</li>
-</ul>
-<p>
-Work the ticket to completion as john.
+Update the ticket’s SLA to Sev-A and verify that the correct department and priority are set.
+Confirm that the ticket reflects the new SLA and department configuration.
 </p>
 
-<h3>Step 5: Create and Resolve the CFO Laptop Outage Ticket</h3>
-<img src="" width="80%" />
+<h3>Step 4: Assign, Resolve the Ticket, and Review Email Behavior</h3>
+<p>Screenshot 1: <a href="https://imgur.com/a/XmfIU3F" target="_blank">View Image</a></p>
+<p>Screenshot 2: <a href="https://imgur.com/a/91yMHC0" target="_blank">View Image</a></p>
 <p>
-As an end user, submit a ticket reporting that the CFO’s laptop will no longer turn on.
-As john, review the ticket’s properties and update:
-</p>
-<ul>
-  <li>SLA: Sev-B (4 hours, 24/7)</li>
-  <li>Department: Support</li>
-</ul>
-<p>
-Simulate diagnosing the problem and complete the ticket.
-</p>
-
-<h3>Step 6: Escalate Tickets and Examine Permissions</h3>
-<img src="" width="80%" />
-<p>
-Apply appropriate SLAs to all tickets, and assign the most critical one to the SysAdmins department.
-Observe how john can no longer view or modify escalated tickets.
-Switch to the Admin Panel to give yourself view-access to SysAdmins, then return to the Agent Panel and observe that the ticket is visible but no longer editable.
-</p>
-
-<h3>Step 7: Complete All Tickets and Review Email Behavior</h3>
-<img src="" width="80%" />
-<p>
-Verify all tickets are closed or resolved.
-Note that in real help desk environments, email integration means users receive email updates whenever tickets are updated. 
-They can reply to those emails, and the responses flow back into the ticket system.
-</p>
-
-<h3>Step 8: Real-World Ticket Intake Overview</h3>
-<img src="" width="80%" />
-<p>
-In practice, tickets originate from many sources: phone, chat, email, web forms, even hallway conversations.
-While fixing issues on the spot is common, it is important to document everything by creating tickets for tracking, accountability, and metrics.
-</p>
-
-<h3>Step 9: Additional Practice</h3>
-<img src="" width="80%" />
-<p>
-osTicket contains many more features than what is covered here. 
-Explore ticket filters, canned responses, SLA policies, and email settings.
-Repeat this lab multiple times to build strong intuition and reinforce your technical skills.
+As the agent, assign the ticket to the appropriate person or team and add an internal note explaining that you are taking ownership of the issue.
+Work the ticket through its lifecycle until the problem is resolved, then close the ticket.
+In a real help desk environment, email integration ensures that end users receive updates whenever the ticket is updated or closed. Users can reply directly to those emails, and their responses are captured inside the ticket thread.
 </p>
 
 <h2>Summary</h2>
 <p>
 In this lab, we simulated real help desk workflows using osTicket running inside a virtual machine.
-We practiced ticket creation, triage, escalation, SLA assignment, resolution, and observed permission effects.
-This exercise builds foundational help desk experience critical for IT Support and Systems roles.
+We practiced ticket creation, triage, SLA assignment, agent assignment, resolution steps, and observed how ticket updates reflect in the system.
+This exercise builds foundational help desk experience that is critical for IT Support and Systems roles.
 </p>
